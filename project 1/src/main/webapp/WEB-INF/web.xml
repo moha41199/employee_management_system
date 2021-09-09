@@ -1,0 +1,99 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>RegisterServlet</servlet-name>
+  	<display-name>RegisterServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.FBook.controller.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>LoginServlet</servlet-name>
+  	<display-name>LoginServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.FBook.controller.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ViewMyProfileServlet</servlet-name>
+  	<display-name>ViewMyProfileServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.FBook.controller.ViewMyProfileServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>SearchServlet</servlet-name>
+  	<display-name>SearchServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.FBook.controller.SearchServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ViewAllProfileServlet</servlet-name>
+  	<display-name>ViewAllProfileServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.FBook.controller.ViewAllProfileServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>editMyProfileServlet</servlet-name>
+  	<display-name>editMyProfileServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.FBook.controller.editMyProfileServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DeleteMyProfile</servlet-name>
+  	<display-name>DeleteMyProfile</display-name>
+  	<description></description>
+  	<servlet-class>com.FBook.controller.DeleteMyProfile</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>LogoutServlet</servlet-name>
+  	<display-name>LogoutServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.FBook.controller.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AdminLoginServlet</servlet-name>
+  	<display-name>AdminLoginServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.FBook.controller.AdminLoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>RegisterServlet</servlet-name>
+  	<url-pattern>/RegisterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>LoginServlet</servlet-name>
+  	<url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ViewMyProfileServlet</servlet-name>
+  	<url-pattern>/ViewMyProfileServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SearchServlet</servlet-name>
+  	<url-pattern>/SearchServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ViewAllProfileServlet</servlet-name>
+  	<url-pattern>/ViewAllProfileServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>editMyProfileServlet</servlet-name>
+  	<url-pattern>/editMyProfileServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DeleteMyProfile</servlet-name>
+  	<url-pattern>/DeleteMyProfile</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>LogoutServlet</servlet-name>
+  	<url-pattern>/LogoutServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AdminLoginServlet</servlet-name>
+  	<url-pattern>/AdminLoginServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+</web-app>

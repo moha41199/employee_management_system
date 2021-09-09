@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Home</title>
+<style>
+	body {
+	  margin: 0;
+	  font-size: 28px;
+	  font-family: Arial, Helvetica, sans-serif;
+	}
+	
+	.header {
+	  background-color: #f1f1f1;
+	  padding: 30px;
+	  text-align: center;
+	}
+	
+	#navbar {
+	  overflow: hidden;
+	  background-color: #333;
+	  display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	}
+	
+	#navbar a {
+	  float: left;
+	  display: block;
+	  color: #f2f2f2;
+	  text-align: center;
+	  padding: 14px 16px;
+	  text-decoration: none;
+	  font-size: 17px;
+	}
+	
+	#navbar a:hover {
+	  background-color: #ddd;
+	  color: black;
+	}
+	
+	#navbar a.active {
+	  background-color: #2565E6;
+	  color: white;
+	}
+	
+	.content {
+	  padding: 16px;
+	}
+	
+	.sticky {
+	  position: fixed;
+	  top: 0;
+	  width: 100%;
+	}
+	
+	.sticky + .content {
+	  padding-top: 60px;
+	}
+	.logo {
+		display: flex;
+		flex-direction: row;
+		align-items: center
+	}
+	.card {
+		background: red;
+		width: 30%;
+		height: 30%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	</style>
+</head>
+<body>
+	<div class="logo">
+		<img src="http://127.0.0.1:8887/facebook1.png" alt="facebook" class="facebook" height="100px" width="100px">
+		<h3 style="font-size: 25px;">Welcome</h3>
+	</div>
+	<div id="navbar">
+		<a class="active" href="/FBook/home.html">Home</a>
+		<a href="/FBook/viewMyProfile.html">My Profile</a>
+		<a href="/FBook/editMyProfile.html">Edit Profile</a>
+		<a href="/FBook/searchProfile.html">Search Profile</a>
+		<a href="/FBook/viewAllProfile.html">View all Profile</a>
+		<a href="deleteMyProfile.html">Delete profile</a>
+		<a href="/FBook/logout.html">Log out</a>
+	</div>
+	
+	<!--javascipt-->
+	<script>
+		window.onscroll = function() {myFunction()};
+		
+		var navbar = document.getElementById("navbar");
+		var sticky = navbar.offsetTop;
+		
+		function myFunction() {
+		  if (window.pageYOffset >= sticky) {
+			navbar.classList.add("sticky")
+		  } else {
+			navbar.classList.remove("sticky");
+		  }
+		}
+		</script>
+</body>
+
+</html>

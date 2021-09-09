@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register</title>
+<style>
+	body {
+		font-family: Arial, Helvetica, sans-serif;
+		position: relative;
+	}
+	form {border: 3px solid #f1f1f1;}
+	
+	input[type=text], input[type=password] {
+	  width: 60%;
+	  padding: 12px 20px;
+	  margin: 8px 0;
+	  display: inline-block;
+	  border: 1px solid #ccc;
+	  box-sizing: border-box;
+	}
+	
+	button {
+	  background-color: #04AA6D;
+	  color: white;
+	  padding: 14px 20px;
+	  margin: 8px 0;
+	  border: none;
+	  cursor: pointer;
+	  width: 30%;
+	}
+	
+	button:hover {
+	  opacity: 0.8;
+	}
+	
+	.imgcontainer-facebook {
+	  text-align: left;
+	  justify-content: left;
+	  margin-top:0;
+	  width: 150px;
+		height:170px;
+		  border-radius: 50%;
+	}
+	.imgcontainer-avatar{
+	  text-align: center;
+	  justify-content: center;
+	  border-radius: 50%;
+	}
+	
+	
+	.container {
+	  padding: 16px;
+	  display:flex;
+	  flex-direction: column;
+	  justify-content: center;
+	  align-items: center;
+	}
+	
+	span.psw {
+	  float: right;
+	  padding-top: 16px;
+	}
+	
+	/* Change styles for span and cancel button on extra small screens */
+	@media screen and (max-width: 300px) {
+	  span.psw {
+		 display: block;
+		 float: none;
+	  }
+	}
+	</style>
+</head>
+<body>
+	<div class="imgcontainer-facebook">
+		<img src="http://127.0.0.1:8887/facebook1.png" alt="facebook" class="facebook">
+	  </div>
+	<form action="RegisterServlet" method="post">
+		<div class="imgcontainer-avatar">
+		  <img src="http://127.0.0.1:8887/user.jpg" alt="facebook" class="facebook" height="140px" width="150px">
+		</div>
+	  
+		<div class="container">
+		  <div>
+			<label for="uname"><b>Name &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b></label>
+			<input type="text" placeholder="Enter Name" name="nm" required>
+		  </div>
+		  <div>
+			<label for="psw"><b>Password &nbsp&nbsp</b></label>
+			<input type="password" placeholder="Enter Password" name="pw" id="pwid" onkeyup="validatePwd()" required><div id="b"></div>
+		  </div>
+		  <div>
+			<label for="uname"><b>Email &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b></label>
+			<input type="text" placeholder="Enter Email" name="em" required>
+		  </div>
+		  <div>
+			<label for="uname"><b>Address &nbsp&nbsp&nbsp&nbsp&nbsp</b></label>
+			<input type="text" placeholder="Enter Address" name="ad" required>
+		  </div>
+		  <button type="submit">Signup</button>
+		</div>
+	  
+		<div class="container" style="background-color:#f1f1f1">
+		  <span class="psw">Already have an account <a href="/FBook/login.html">Login</a></span>
+		</div>
+	  </form>
+</body>
+<script type="text/javascript">
+		function validatePwd(){
+			var v1=document.getElementById("pwid").value;
+			console.log(v1);
+			if(v1.length<4){
+				document.getElementById("b").innerHTML="password should not be less than 4 charater";
+				document.getElementById("pc").focus();
+			}
+			if(v1.length>=4 &&v1.length<6 ){
+				document.getElementById("b").innerHTML="<font color=red>weak</font>";
+			}
+			if(v1.length>=6 && v1.length<8){
+				document.getElementById("b").innerHTML="<font color=blue>medium</font>";
+			}
+			if(v1.length>=8){
+				document.getElementById("b").innerHTML="<font color=green>strong</font>";
+			}
+		}
+</script>
+</html>
