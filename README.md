@@ -19,7 +19,7 @@ Features:
  
 Getting Started
 
-        git remote add origin https://github.com/moha41199/project1.git
+        git remote add origin https://github.com/moha41199/employee_management_system.git
  
         compile and run the java code for the server and database connection
         open up the home.html in the browser and pick a login
